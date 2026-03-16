@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公民算力計畫-透過AI，協助媒體識讀發展</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav>
+    <a href="#" class="nav-brand">
+      <img src="assets/logo_transparent.png" alt="PowerReader Logo" class="nav-logo">
+      <em>PowerReader</em>-公民算力實驗計畫
+    </a>
+    <ul class="nav-links">
+      <li><a href="#act2">為什麼</a></li>
+      <li><a href="#scenes">能做什麼</a></li>
+      <li><a href="#join">加入</a></li>
+      <li><a href="#trust">透明</a></li>
+    </ul>
+
+    <button class="menu-toggle" aria-label="切換選單" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-status-hud" id="navStatusHud"></div>
+
+
+  <section class="act1">
+    <div class="act1-bg-text" aria-hidden="true">偏見</div>
+
+    <div class="act1-content">
+      <div class="eyebrow r">experiment_v0.2</div>
+      <h1 class="act1-h1 r">
+        參與，<br>
+        只需要你<span class="red">閱讀</span><br>
+        和<span class="red">貢獻算力</span>
+      </h1>
+
+      <p class="act1-sub r">
+        你有發現社會越來越對立了嗎?。<br>
+        這是一個實驗性計畫，不仰賴機構、政黨，從AI模型角度出發——<br>
+        <strong>它靠每一個打開瀏覽器的人，一起把新聞分析這件事做完。</strong>
+      </p>
+
+      <div class="act1-cta r">
+        <a href="#scenes" class="btn-main">看看這能改變什麼</a>
+        <a href="#join" class="btn-line">我想更深入參與 →</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">繼續閱讀</div>
+  </section>
+
+  <!-- ══════════════════
+     幕二：認出
+     ══════════════════ -->
+  <section class="act2" id="act2">
+    <div class="container">
+      <div class="voices">
+
+        <div class="voice r">
+          <div class="voice-mark">"</div>
+          <div class="voice-body">
+            <p>每次打開新聞，不是吵這個，就是吵那個。我根本不知道哪個是真的，只知道自己越看越憤怒，某某政黨真是爛透了。</p>
+            <div class="voice-src">── 台北，習慣看新聞的上班族</div>
+            <div class="voice-react" onclick="addOne(this)">
+              <span>我可能有被媒體帶過情緒</span>
+              <span class="voice-num">+1204</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="voice r">
+          <div class="voice-mark">"</div>
+          <div class="voice-body">
+            <p>同一件事，不同媒體寫的像兩個平行宇宙。我不是不想了解真相——是根本不知道從哪裡開始相信起。</p>
+            <div class="voice-src">── 台中，大學生</div>
+            <div class="voice-react" onclick="addOne(this)">
+              <span>我開始不想為任何政黨投票了</span>
+              <span class="voice-num">+988</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="voice r">
+          <div class="voice-mark">"</div>
+          <div class="voice-body">
+            <p>那些評比媒體的機構，背後哪個沒有顏色？我不需要另一個告訴我該相信誰的人。</p>
+            <div class="voice-src">── 高雄，對所謂「獨立媒體」也失去信任的中年人</div>
+            <div class="voice-react" onclick="addOne(this)">
+              <span>我認為媒體中立是假的</span>
+              <span class="voice-num">+2,671</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 過渡：從憤怒到可能性 -->
+      <div class="bridge r">
+        <div class="bridge-left">
+          <div class="eyebrow">實驗概念</div>
+          <h2>算力民主化/公民算力</h2>
+        </div>
+        <div class="bridge-right">
+          <p>台灣媒體長期依靠政黨廣告與財團資金維生，立場與利益糾纏太深，沒有任何「人」可以真正置身事外做裁判。</p>
+          <p>但如果裁判不是人呢？如果分析這件事是由<strong>一個沒有黨籍、沒有廣告主、分析規則完全公開的 AI</strong> 來做——而背後的算力，來自每一個普通公民的閒置裝置？</p>
+          <p>這不是在說科技會解決一切。這是在說：<strong>當工具回到公民手上，至少我們有機會自己看清楚。</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════
+     幕二．五：啟示
+     為什麼這個不一樣
+     ══════════════════ -->
+  <section class="contrast" id="contrast">
+    <div class="container">
+      <div class="contrast-intro r">
+        <div class="eyebrow">舊世界 vs 這個計畫</div>
+        <h2>裁判不能有自己的隊伍</h2>
+      </div>
+
+      <div class="contrast-grid r">
+        <div class="c-card">
+          <div class="c-header">
+            <div class="c-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.5-7.5-4-4-3.5 11.5z" />
+              </svg>
+            </div>
+            <div class="c-title">媒體評比機構</div>
+          </div>
+          <div class="c-desc">評分方法論不透明，結果只是另一種有顏色的意見，換個名字包裝而已，可以單從不同單位的民調發現詭異的問題。</div>
+          <div class="c-tag">中心化 · 不透明 · 有利益關係</div>
+        </div>
+
+        <div class="c-card">
+          <div class="c-header">
+            <div class="c-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z" />
+              </svg>
+            </div>
+            <div class="c-title">媒體自稱「公正客觀」</div>
+          </div>
+          <div class="c-desc">廣告主影響報導方向，老闆的政治傾向決定選題角度。沒有任何外部驗證，只有自我聲明。</div>
+          <div class="c-tag">依附資本 · 無法驗證 · 自說自話</div>
+        </div>
+
+        <div class="c-card this-one">
+          <div class="c-header">
+            <div class="c-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L1 21h22L12 2zm0 3.45L20.1 19H3.9L12 5.45zM11 16h2v2h-2v-2zm0-6h2v4h-2v-4z" />
+              </svg>
+            </div>
+            <div class="c-title">實驗計畫-PowerReader</div>
+          </div>
+          <div class="c-desc">
+            分析規則完全公開，任何人都可以查看、質疑、修改。
+            分析內容本身無法更改，算力來自公民，不來自機構。
+          </div>
+          <div class="c-tag">內容去中心化 · 完全公開 · 公民維護</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════
+     具體場景
+     意義落地
+     ══════════════════ -->
+  <section class="scenes" id="scenes">
+    <div class="container">
+      <div class="scenes-intro r">
+        <div class="eyebrow">未來的願景與可能性</div>
+        <h2>不是「媒體會變好」——<br>是你的<em>日常</em>會<em>不同</em></h2>
+      </div>
+
+      <div class="scene-list">
+
+        <div class="scene r">
+          <div class="scene-num-col" aria-hidden="true">1</div>
+          <div class="scene-body">
+            <div class="scene-tag">LINE 群組場景</div>
+            <h4>長輩傳來一篇「獨家爆料」，你不用再跟他爭了</h4>
+            <p>
+              你直接貼上這篇文章的分析連結。他自己看到：
+              <strong>情緒操控指數有多少、藍綠白成份比例、標題與內文差異</strong>。
+              不是你說的，是AI評估後說的。
+            </p>
+          </div>
+        </div>
+
+        <div class="scene r">
+          <div class="scene-num-col" aria-hidden="true">2</div>
+          <div class="scene-body">
+            <div class="scene-tag">投票前的場景</div>
+            <h4>選舉前夕，你想知道誰在操弄你</h4>
+            <p>
+              查看同一個政策議題在八家媒體的報導差異。哪家完全只引用一方說法、哪家把反對意見藏在最後兩段、
+              <strong>哪家的標題與內容根本是兩件事</strong>——一眼看清。
+            </p>
+          </div>
+        </div>
+
+        <div class="scene r">
+          <div class="scene-num-col" aria-hidden="true">3</div>
+          <div class="scene-body">
+            <div class="scene-tag">媒體識讀的場景</div>
+            <h4>你不用成為專家，也能看懂新聞在做什麼</h4>
+            <p>
+              綜合共同類似文章，AI 會分析總體摘要：它用了什麼情緒詞彙、省略了哪些消息來源、
+              <strong>這個角度在台灣政治光譜上屬於哪個位置</strong>。
+              讀新聞的同時，就是在學習怎麼讀新聞。
+            </p>
+          </div>
+        </div>
+
+        <div class="scene r">
+          <div class="scene-num-col" aria-hidden="true">4</div>
+          <div class="scene-body">
+            <div class="scene-tag">長期的場景</div>
+            <h4>當夠多人在看這個，媒體會知道</h4>
+            <p>
+              沒有媒體想讓自己的情緒操控指數長期排在最高。
+              <strong>當分析結果變成公開壓力</strong>，當讀者開始有工具分辨，
+              媒體的誘因就會慢慢改變。這不是幻想，這是可以被驗證的假設。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════
+     幕三：召喚
+     ══════════════════ -->
+  <section class="act3" id="join">
+    <div class="container">
+
+      <!-- 備註：這句話的重點是「缺席是一種選擇」
+         讓不參與感覺像是一種損失，而不是中性的沒有行動 -->
+      <h2 class="act3-headline r">
+        這件事少了你，<br>就少一份<em>算力</em>、<br>少一個聲音。
+      </h2>
+
+      <p class="act3-body r">
+        這個系統的分析能力，來自每一個訪客的裝置。
+        沒有伺服器在幫你分析——是你的電腦GPU，在替網路上所有讀者算出結果。
+        <strong>你每多停留三分鐘，就多了一篇被分析的報導。</strong><br><br>
+        這不是在請你「支持一個計畫」。這是在說：你已經有能力改變這件事，
+        而且未來你都可以這樣貢獻。
+      </p>
+
+      <div class="join-grid r">
+        <div class="join-card primary">
+          <div class="j-step">最直接的方式</div>
+          <div class="j-title">打開平台，<br>開始閱讀新聞</div>
+          <div class="j-desc">
+            你在這裡讀新聞的同時，AI 在背景分析，結果自動貢獻給所有人。
+            不需要任何設定，不需要任何技術。你的瀏覽、掛機就是貢獻。
+          </div>
+          <a href="#" class="j-action">進入分析平台 →</a>
+        </div>
+
+        <div class="join-card">
+          <div class="j-step">讓系統更聰明</div>
+          <div class="j-title">看到分類錯誤，<br>按一個鍵回報</div>
+          <div class="j-desc">
+            如果娛樂新聞跑進了政治類、如果有重要報導被漏掉——
+            一個按鈕就能回報。每一次回報都讓系統更準確。
+            你的判斷力也是這個系統的一部分。
+          </div>
+          <a href="#" class="j-action">了解回報方式 →</a>
+        </div>
+
+        <div class="join-card">
+          <div class="j-step">給想更深入的人</div>
+          <div class="j-title">參與分析規則<br>的公開討論</div>
+          <div class="j-desc">
+            AI 用什麼標準判斷「偏藍」或「情緒操控」——這些規則、資料庫完全公開，
+            任何人都可以質疑、提出修改。不需要會寫程式，只需要有想法。
+          </div>
+          <a href="#" class="j-action">查看規則討論 →</a>
+        </div>
+      </div>
+
+      <!-- 設備說明：低調放置，有疑問的人會自己找到 -->
+      <div class="device-note r">
+        <p>💡
+          <strong>關於「你的裝置在分析」這件事：</strong>分析在你的裝置本地進行，你無須任何技術或下載任何應用，第一次使用會下載AI模型(可以刪除)。有防呆機制，符合GPU狀態和使用者同意下才會進行電腦運算，你中斷離開也不會有任何影響，只要關閉網頁就會停止GPU運算。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════
+     信任：我們沒有秘密
+     ══════════════════ -->
+  <section class="trust" id="trust">
+    <div class="container">
+      <div class="eyebrow r" style="justify-content:center;color:var(--red);">為什麼你可以信任這個計畫</div>
+      <h2 class="trust-h2 r">緩解社會對立的Solution</h2>
+      <p class="trust-p r">
+        我們的生活，正在這場急遽變化的媒體、社會中逐漸侵蝕，你就在這場暴風眼正中央，我們資訊激化是其他民主世界的加速版。
+      </p>
+      <div class="r">
+        <a href="https://github.com" class="btn-main" style="margin-right:16px;">查看完整原始碼</a>
+        <a href="#" class="btn-line" style="color:rgba(255,255,255,0.35);border-color:rgba(255,255,255,0.18);">閱讀技術說明
+          →</a>
+      </div>
+
+      <div class="trust-grid r">
+        <div class="trust-point">
+          <div class="tp-header">
+            <div class="tp-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.5-7.5-4-4-3.5 11.5z" />
+              </svg>
+            </div>
+            <div class="tp-title">完全開放原始碼</div>
+          </div>
+          <div class="tp-desc">平台架設計Cloudflare，資料庫、代碼都在github，也可參與社群討論共同修正</div>
+        </div>
+        <div class="trust-point">
+          <div class="tp-header">
+            <div class="tp-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z" />
+              </svg>
+            </div>
+            <div class="tp-title">分析規則有完整歷史</div>
+          </div>
+          <div class="tp-desc">AI 的每一條判斷規則，修改前後的紀錄都保存著。沒有人可以偷偷改規則，包含開發者。</div>
+        </div>
+        <div class="trust-point">
+          <div class="tp-header">
+            <div class="tp-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z" />
+              </svg>
+            </div>
+            <div class="tp-title">方案的實驗和實踐</div>
+          </div>
+          <div class="tp-desc">針對台灣藍、綠、白三黨的政治光譜設計，但仍有一些技術性困難正在解決</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="f-brand">
+      <img src="assets/logo_transparent.png" alt="PowerReader Logo" class="f-logo">
+      <em>PowerReader</em>-公民算力實驗計畫
+    </div>
+
+    <div class="f-copyright">
+      © 2026 PowerReader - 公民算力實驗計畫 | Developed by <a href="https://github.com/MackinHung"
+        target="_blank">@MackinHung</a>
+    </div>
+
+    <div class="f-social">
+      <a href="https://github.com/MackinHung" target="_blank" title="GitHub">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+        </svg>
+      </a>
+      <a href="#" target="_blank" title="Discord">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.052-.102.001-.226-.106-.267a12.865 12.865 0 0 1-1.878-.895.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.196.373.291a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.879.896.077.077 0 0 0-.109.268c.35.7.76 1.362 1.222 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+        </svg>
+      </a>
+      <a href="mailto:mackinhung@gmail.com" title="Email">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+        </svg>
+      </a>
+    </div>
+
+
+  </footer>
+
+  <div class="info-float">
+    <div class="info-btn" id="infoBtn" onclick="toggleInfo()">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+      </svg>
+      <span class="info-label">計畫說明</span>
+    </div>
+    <div class="info-card" id="statusCard">
+      <div class="info-header">
+        <div class="info-title">計畫狀態說明</div>
+        <div class="info-badge">DEMO</div>
+        <div class="info-close" onclick="toggleInfo()">✕</div>
+      </div>
+      <div class="info-body">
+        <p>我是開發者 <b>@MackinHung</b>，感謝你關注 PowerReader。</p>
+        <p>目前你瀏覽的是計畫的展示頁面，多數功能模組正處於<b>施工開發階段</b>。</p>
+        <p><b>重要時程：</b><br>
+          由於開發者即將入伍服役（4個月），預計更完整的系統將於 <b>9月左右</b> 發布。
+        </p>
+        <p>但我會盡力在入伍前提供最早的 <b>Beta 測試版本 (POC)</b>。如果你有興趣參與測試或加入社群，歡迎與我聯繫。</p>
+        <p><a href="mailto:mackinhung@gmail.com">mackinhung@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
