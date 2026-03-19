@@ -5,6 +5,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>公民算力計畫-透過AI，協助媒體識讀發展</title>
+  <meta name="description" content="PowerReader 公民算力計畫：用你的閒置 GPU 算力，讓 AI 分析台灣新聞的媒體偏見與政治立場。開源、透明、去中心化的媒體識讀工具。">
+  <meta name="author" content="MackinHung">
+  <link rel="canonical" href="https://powerreader-site.pages.dev/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/logo_transparent.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo_transparent.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="PowerReader 公民算力實驗計畫">
+  <meta property="og:title" content="公民算力計畫-透過AI，協助媒體識讀發展">
+  <meta property="og:description" content="用你的閒置 GPU 算力，讓 AI 分析台灣新聞的媒體偏見與政治立場。開源、透明、去中心化的媒體識讀工具。">
+  <meta property="og:url" content="https://powerreader-site.pages.dev/">
+  <meta property="og:image" content="https://powerreader-site.pages.dev/assets/logo_transparent.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="公民算力計畫-透過AI，協助媒體識讀發展">
+  <meta name="twitter:description" content="用你的閒置 GPU 算力，讓 AI 分析台灣新聞的媒體偏見與政治立場。開源、透明、去中心化的媒體識讀工具。">
+  <meta name="twitter:image" content="https://powerreader-site.pages.dev/assets/logo_transparent.png">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "PowerReader 公民算力實驗計畫",
+        "url": "https://powerreader-site.pages.dev/",
+        "logo": "https://powerreader-site.pages.dev/assets/logo_transparent.png",
+        "description": "用公民閒置算力驅動 AI 分析台灣新聞媒體偏見的開源實驗計畫",
+        "sameAs": [
+          "https://github.com/MackinHung/PowerReader-beta"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "PowerReader 公民算力實驗計畫",
+        "url": "https://powerreader-site.pages.dev/",
+        "inLanguage": "zh-TW",
+        "description": "PowerReader 公民算力計畫：用你的閒置 GPU 算力，讓 AI 分析台灣新聞的媒體偏見與政治立場。"
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
@@ -14,7 +63,7 @@
 
 <body>
 
-  <nav>
+  <nav aria-label="主要導覽">
     <a href="#" class="nav-brand">
       <img src="assets/logo_transparent.png" alt="PowerReader Logo" class="nav-logo">
       <em>PowerReader</em>-公民算力實驗計畫
@@ -36,6 +85,7 @@
 
   <div class="nav-status-hud" id="navStatusHud"></div>
 
+  <main>
 
   <section class="act1">
     <div class="act1-bg-text" aria-hidden="true">偏見</div>
@@ -138,7 +188,7 @@
         <div class="c-card">
           <div class="c-header">
             <div class="c-icon">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="媒體評比機構圖示">
                 <path
                   d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.5-7.5-4-4-3.5 11.5z" />
               </svg>
@@ -152,7 +202,7 @@
         <div class="c-card">
           <div class="c-header">
             <div class="c-icon">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="媒體自稱公正客觀圖示">
                 <path
                   d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z" />
               </svg>
@@ -166,7 +216,7 @@
         <div class="c-card this-one">
           <div class="c-header">
             <div class="c-icon">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PowerReader 實驗計畫圖示">
                 <path d="M12 2L1 21h22L12 2zm0 3.45L20.1 19H3.9L12 5.45zM11 16h2v2h-2v-2zm0-6h2v4h-2v-4z" />
               </svg>
             </div>
@@ -331,7 +381,7 @@
         <div class="trust-point">
           <div class="tp-header">
             <div class="tp-icon">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="開放原始碼圖示">
                 <path
                   d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.5-7.5-4-4-3.5 11.5z" />
               </svg>
@@ -343,7 +393,7 @@
         <div class="trust-point">
           <div class="tp-header">
             <div class="tp-icon">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="歷史紀錄圖示">
                 <path
                   d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z" />
               </svg>
@@ -355,7 +405,7 @@
         <div class="trust-point">
           <div class="tp-header">
             <div class="tp-icon">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="數據分析圖示">
                 <path
                   d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z" />
               </svg>
@@ -367,6 +417,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <footer>
     <div class="f-brand">
@@ -380,20 +432,20 @@
     </div>
 
     <div class="f-social">
-      <a href="https://github.com/MackinHung" target="_blank" title="GitHub">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <a href="https://github.com/MackinHung" target="_blank" title="GitHub" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
           <path
             d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
         </svg>
       </a>
-      <a href="#" target="_blank" title="Discord">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <a href="#" target="_blank" title="Discord" aria-label="Discord">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
           <path
             d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.052-.102.001-.226-.106-.267a12.865 12.865 0 0 1-1.878-.895.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.196.373.291a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.879.896.077.077 0 0 0-.109.268c.35.7.76 1.362 1.222 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
         </svg>
       </a>
-      <a href="mailto:mackinhung@gmail.com" title="Email">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <a href="mailto:mackinhung@gmail.com" title="Email" aria-label="Email">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
           <path
             d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
         </svg>
@@ -404,8 +456,8 @@
   </footer>
 
   <div class="info-float">
-    <div class="info-btn" id="infoBtn" onclick="toggleInfo()">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <div class="info-btn" id="infoBtn" onclick="toggleInfo()" role="button" aria-label="開啟計畫說明">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
       </svg>
       <span class="info-label">計畫說明</span>
