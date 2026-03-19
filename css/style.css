@@ -89,6 +89,19 @@ nav.hidden {
 }
 .nav-links a.active::after { width: 100%; }
 
+.nav-cta {
+  background: var(--red);
+  color: var(--paper) !important;
+  padding: 6px 16px !important;
+  border-radius: 4px;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.5px;
+  transition: opacity .3s !important;
+}
+.nav-cta:hover { opacity: 0.85; }
+.nav-cta::after { display: none !important; }
+
 /* --- Mobile Toggle --- */
 .menu-toggle {
   display: none;
